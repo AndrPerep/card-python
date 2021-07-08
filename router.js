@@ -6,7 +6,6 @@ import conditions from '@/components/conditions.vue'
 import main from '@/components/main.vue'
 import NotFound from '@/components/NotFound.vue'
 
-
 const history = createWebHistory()
 const router = createRouter({
   history,
@@ -39,7 +38,7 @@ const router = createRouter({
     {
       path: '/404',
       name: '404',
-      component: NotFound,
+      component: NotFound
     },
     {
       path: '*',
