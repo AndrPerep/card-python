@@ -4,6 +4,8 @@ import lists from '@/components/lists.vue'
 import dicts from '@/components/dicts.vue'
 import conditions from '@/components/conditions.vue'
 import main from '@/components/main.vue'
+import NotFound from '@/components/NotFound.vue'
+
 
 const history = createWebHistory()
 const router = createRouter({
@@ -33,6 +35,15 @@ const router = createRouter({
       path: '/conditions',
       name: 'conditions',
       component: conditions
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: NotFound,
+    },
+    {
+      path: '*',
+      redirect: '/404'
     }
   ]
 })
