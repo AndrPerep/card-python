@@ -6,7 +6,7 @@ import conditions from '@/components/conditions.vue'
 import main from '@/components/main.vue'
 import NotFound from '@/components/NotFound.vue'
 
-const history = createWebHistory()
+const history = createWebHistory('/Python-Cards/')
 const router = createRouter({
   history,
   routes: [
@@ -41,7 +41,7 @@ const router = createRouter({
       component: NotFound
     },
     {
-      path: '*',
+      path: '/:pathMatch(.*)*',
       redirect: '/404'
     }
   ]
